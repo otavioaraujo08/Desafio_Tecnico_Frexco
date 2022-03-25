@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar funcionario</title>
+</head>
+<body>
+    <form method="post" class="card-body">
+        <h1 class="Titulo"> Adicionar Funcionário </h1>
+
+        <div class="input-body">
+            {% csrf_token %}
+            {{ form }}
+            <details style="font-size: 15px;">
+                <summary>Data de Nascimento</summary>
+                <p>Informar a mesma em formato DD/MM/YYYY.<br><br>Ex: 08/11/2000</p>
+            </details>
+            <br>
+            <details style="font-size: 15px;">
+                <summary>Senha</summary>
+                <br>
+                <p>Caso usuário não digitar já é definido um padrão aleatório</p>
+            </details>
+            <br>
+        </div>
+        <div class="card-footer">
+            <button class="btn" type="submit">
+                <i class="align-middle" href="{% url 'home' %}">Salvar</i>
+            </button>
+            <a style="color: red;" href="{% url 'home' %}">
+                Cancelar
+            </a>
+        </div>
+    </form>
+</body>
+</html>
+
+<style>
+    * {
+        font-family: 'Merriweather', serif;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    body{
+        background: rgb(131,58,180);
+        background: linear-gradient(90deg, rgb(113, 180, 58) 0%, rgb(170, 225, 19) 50%, rgb(233, 237, 33) 100%);
+    }
+
+    input {
+        width: 150px;
+        margin: 60px 20px 20px 20px;
+    }
+
+    a {
+        margin-left: 30px;
+        color: aliceblue;
+    }
+
+    .Titulo {
+        text-align: center;
+        color: greenyellow;
+        padding-top: 60px;
+    }
+
+    .card-body {
+        background: black;
+        width: 1200px;
+        height: auto;
+        margin-top: 110px;
+        margin-left: 120px;
+        font-size: 20px;
+        color: beige;
+        text-align: center;
+    }
+
+    .card-footer {
+        background: black;
+        text-align:  center;
+    }
+
+    .btn {
+        color: black;
+        background: rgb(169, 179, 169);
+        font-size: 20px;
+        margin: 25px;
+    }
+</style>
