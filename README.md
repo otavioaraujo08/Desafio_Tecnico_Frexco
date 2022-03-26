@@ -1,4 +1,4 @@
-# Desafio_Tecnico_Frexco
+# Desafio Técnico Frexco
 
 <!--ts-->
    * Construir pelo menos dois endpoints utilizando Django:
@@ -13,7 +13,7 @@
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/otavioaraujo08/Desafio_Tecnico_Frexco>
+$ git clone https://github.com/otavioaraujo08/Desafio_Tecnico_Frexco
 
 # Criando a Virtual Env
 $ python -m venv ./venv  
